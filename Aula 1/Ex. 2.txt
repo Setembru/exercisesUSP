@@ -1,0 +1,7 @@
+INICIO
+DECLARE F, C
+ESCREVA "Qual a temperatura em graus Celsius?"
+LEIA C
+F <- (C*9)/5 + 32
+ESCREVA "Em Fahrenheit é: " F
+FIM
