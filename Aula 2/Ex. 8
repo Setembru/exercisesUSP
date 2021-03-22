@@ -1,0 +1,32 @@
+INICIO
+DECLARE l1, l2, l3, val, tri
+LEIA L1
+LEIA L2
+LEIA L3
+
+SE (l1 + l2 > l3) e (l1 + l2 > l3)
+ENTÃO
+val = 'válido'
+SENÃO
+val = 'inválido'
+
+	SE l1 == l2 e l2 == l3 e l3 == l1 e val == 'válido'
+	ENTÃO
+	tri = 'equilátero'
+	SENÃO
+	SE l1 == l2 ou l2 == l3 ou l3 == l1 'válido'
+	ENTÃO
+	tri = 'isósceles'
+	SENÃO
+	tri = 'escaleno'
+	FIMSE
+FIMSE
+
+SE val == inválido
+ENTÃO
+tri = ''
+FIMSE
+
+ESCREVA "O triângulo é" val 'e é' tri
+
+FIM

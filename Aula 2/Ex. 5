@@ -1,0 +1,13 @@
+INICIO
+DECLARE n1, n2, n3, media
+LEIA n1
+LEIA n2
+LEIA n3
+media <- (n1 + n2 + n3)/3
+SE media >= 5.0
+ENTÃO
+ESCREVA "Aprovado"
+SENÃO
+ESCREVA "Reprovado"
+FIMSE
+FIM
