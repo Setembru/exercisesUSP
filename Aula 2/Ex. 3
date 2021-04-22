@@ -1,9 +1,12 @@
 INICIO
 DECLARE sexo, peso, altura
+
+ESCREVA "M ou F?"
 LEIA sexo
+ESCREVA "Insira sua altura"
 LEIA altura
 
-SE sexo == 'homem'
+SE sexo == 'H'
 ENTÃO
 peso <- (72.7 * altura) - 58
 SENÃO
