@@ -1,12 +1,14 @@
 INICIO
-DECLARE h1, m1, s1, h2, m2, s2, duracao, resto
-LEIA h1
-LEIA m1
-LEIA s1
-LEIA duracao
-h2 <- duracao/(60*60)
-resto <- duracao - h2*(60*60)
-m2 <- duracao/60
-s2 <- duracao - m2*60
-ESCREVA h1 + h2 "horas" m1 + m2 "minutos e" s1 + s2 "segundos.""
+DECLARE sexo, peso, altura
+LEIA sexo
+LEIA altura
+
+SE sexo == 'homem'
+ENTÃO
+peso <- (72.7 * altura) - 58
+SENÃO
+peso <- (62.1 * altura) – 44.7
+FIMSE
+
+ESCREVA "Seu peso ideal é:" peso
 FIM

@@ -1,12 +1,11 @@
 INICIO
-DECLARE i1, i2, k, premio
-ESCREVA "Quanto o primeiro investiu?"
-LEIA i1
-ESCREVA "Quanto o segundo investiu?"
-LEIA i2
-ESCREVA "Qual o valor do prêmio?"
-LEIA premio
-k <- premio/(i1 + i2)
-ESCREVA "O primeiro ganhará" i1*k
-ESCREVA "O segundo ganhará" i2*k
-"FIM
+DECLARE salario, novosalario
+LEIA salario
+SE salario >= 500.0
+ENTÃO
+novosalario <- 1.2*salario
+SENÃO
+novosalario <- 1.1*salario
+FIMSE
+ESCREVA novosalario "é o novo salário."
+FIM
