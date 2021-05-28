@@ -2,11 +2,11 @@
 #include <math.h>
 
 int main(){
-    int l, a;
+    int l, area, perimetro;
     printf("Digite o comprimento do lado em cm: ");
     scanf("%d", &l);
-    a = l*l;
-    printf("A area eh: %d cm^2", a);
-    getch();
+    perimetro = 4*l;
+    area = l*l;
+    printf("%d %d", area, perimetro);
     return 0;
 }

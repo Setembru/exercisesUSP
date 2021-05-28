@@ -3,9 +3,9 @@ DECLARE salario, novosalario
 LEIA salario
 SE salario >= 500.0
 ENTÃO
-novosalario <- 1.2*salario
-SENÃO
 novosalario <- 1.1*salario
+SENÃO
+novosalario <- 1.2*salario
 FIMSE
 ESCREVA novosalario "é o novo salário."
 FIM
