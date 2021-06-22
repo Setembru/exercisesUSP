@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
-void main(){
+void main() {
     int x, y, n, sum;
 
     // Entrada
@@ -11,28 +12,15 @@ void main(){
     printf("Insira o numero y: ");
     scanf("%d", &y);
 
-    
-
-    /*
-    // Descobrindo n
-    if (x >= y)
-        // Serve para o else também:
-        //+1 para que os DOIS números sejam considerados nessa soma. 
-        n = x - y + 1;
-    else
-        n = y - x + 1;
-
-    // Soma
-    if (x == y)
-        sum = x;
-    else
-        sum = (x + y)*n/2;
-
-    // Saída
-    printf("A soma eh %d.", sum);
-
-    Essa forma é válida, mas não usa os laços solicitados
-    */
-
-    return;
+    // A DECIDIR
+    if (x >= y) {
+        printf("ERRO");
+        exit(0);
+    } 
+    else {
+        for (int i = x + 1; i <= y; i++){
+            x += i;
+        }
+    }
+    printf("%d", x);
 }

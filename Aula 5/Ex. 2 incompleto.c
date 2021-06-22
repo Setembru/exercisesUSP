@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main(){
     float porc = 0, temp, maior, menor, media;
@@ -12,13 +13,12 @@ int main(){
     // Média está aqui pois está recebendo o seu primeiro valor
     media = maior = menor = temp;
 
-    if (temp < 0)
-        exit(0);
-
     // Primeiro teste de maiores e menores notas
     if (temp >= 5)
         altas = altas + 1;
-    else
+    else if (temp < 0)
+        printf("Enois\n");
+    else if (temp < 5 && temp >= 0)
         baixas = baixas + 1;
 
     while (temp >= 0){
