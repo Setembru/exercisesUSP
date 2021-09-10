@@ -1,33 +1,23 @@
 #include "functions.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 struct coordinates_ {
     float x;
     float y;
 };
 
-struct path_ {
-    float distance;
-};
+int read_points_number(int noOfPoints) {
 
-int* read_points_number(int inNoOfPoints) {
+    if (noOfPoints <= 1)
+        exit(1);
 
-    if (inNoOfPoints <= 1)
-        return NULL;
-
-    int *outNoOfPoints = (int*)malloc(sizeof(int));
-    outNoOfPoints = &inNoOfPoints;
-    return outNoOfPoints;
+    return noOfPoints;
 }
 
-COORDINATES* read_points_coords(int *numberOfPoints) {
-    COORDINATES *coords = (COORDINATES*)calloc(*numberOfPoints, sizeof(COORDINATES));
-    for (int i = 0; i < *numberOfPoints; i++)
+COORDINATES* read_points_coords(int numberOfPoints) {
+    COORDINATES *coords = (COORDINATES*)calloc(numberOfPoints, sizeof(COORDINATES));
+    for (int i = 0; i < numberOfPoints; i++)
         if (scanf("%f %f", &coords[i].x, &coords[i].y) != 2)
-            return NULL;
+            exit(1);
 
     return coords;
 }
@@ -42,23 +32,21 @@ float calc_distance_internal(COORDINATES *pointA, COORDINATES *pointB) {
     return distance;
 }
 
-PATH* calc_distance(int numberOfPoints, COORDINATES *coords) {
-    PATH total_distance.distance = 0;
+float calc_distance(int numberOfPoints, COORDINATES *coords) {
+    float total_distance = 0;
 
     for (int i = 0; i < numberOfPoints; i++) {
-        total_distance->distance += calc_distance_internal(coords[i].x, coords[i].y);
+        total_distance = calc_distance_internal(&coords[i], &coords[i + 1])
+                + total_distance;
     }
     return total_distance;
 }
 
-
-void print_distance(PATH distance) {
-    printf("%.2f", distance.distance);
+void print_distance(float distance) {
+    printf("\n%.2f", distance);
 }
 
-void free_points_number(int *noOfPoints, COORDINATES *coordinates) {
-    if (noOfPoints != NULL)
-        free(noOfPoints);
+void free_points_number(COORDINATES *coordinates) {
     if (coordinates != NULL)
         free(coordinates);
 }

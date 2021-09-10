@@ -2,7 +2,7 @@ BINARY=main
 MAIN=main.c _functions/functions.c
 
 all:
-	gcc -Wall -Wextra -Werror -g $(MAIN) -o $(BINARY)
+	gcc -Wall -Wextra -Werror -g $(MAIN) -o $(BINARY) -lm
 
 run:
 	./$(BINARY)

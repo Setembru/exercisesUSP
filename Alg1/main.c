@@ -3,17 +3,18 @@
 #include "_functions/functions.h"
 
 int main(){
-    int number, *pointsNumber;
+    int number;
     scanf("%d", &number);
-    pointsNumber = read_points_number(number);
+
+    int pointsNumber = read_points_number(number);
 
     COORDINATES *coordinates = read_points_coords(pointsNumber);
 
-    PATH *distance = calc_distance(pointsNumber, coordinates);
+    float total_distance = calc_distance(pointsNumber, coordinates);
 
-    print_distance(distance->distance);
+    print_distance(total_distance);
 
-    free_points_number(pointsNumber, coordinates);
+    free_points_number(coordinates);
 
     return 0;
 }
