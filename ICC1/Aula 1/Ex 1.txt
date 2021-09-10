@@ -1,0 +1,9 @@
+INICIO
+DECLARE B, H, A
+ESCREVA "Insira a base"
+LEIA B
+ESCREVA "Insira a altura"
+LEIA H
+A <- (B*H)/2
+ESCREVA "A área é: " A
+FIM

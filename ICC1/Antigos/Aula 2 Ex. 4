@@ -1,0 +1,8 @@
+INICIO
+DECLARE p, c, coelhos, patos
+LEIA c
+LEIA p
+coelhos <- (p - 2*c)/2
+patos <- (p - 4*coelhos)/2
+ESCREVA coelhos "coelhos e" patos "patos."
+FIM

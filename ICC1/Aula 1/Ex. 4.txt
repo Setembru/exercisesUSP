@@ -1,0 +1,14 @@
+INICIO
+DECLARE L, H, N, ValorLata, ValorObra, Area, Liquido
+ESCREVA "Qual é o número de paredes?"
+LEIA N
+ESCREVA "Qual é a altura das paredes?"
+LEIA H
+ESCREVA "Qual é a largura das paredes?"
+LEIA L
+Area <- (L*H*N)
+ValorLata <- (Area/5)*20
+ValorObra <- (Area/10)*30
+Liquido <- ValorObra + ValorLata
+ESCREVA "O orçamento deve ser: " Liquido
+FIM

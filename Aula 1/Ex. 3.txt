@@ -1,7 +1,0 @@
-INICIO
-DECLARE D, L
-ESCREVA "Insira o número de dias trabalhados: "
-LEIA D
-L <- (D * 200) * (1 - (0.25 + 0.11))
-ESCREVA "O valor líquido a ser pago é: " L
-FIM

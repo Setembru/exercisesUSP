@@ -1,9 +1,0 @@
-Assumindo que, segundo o PDF, / é uma divisão inteira:
-
-INICIO
-DECLARE dias, dias2, semanas
-LEIA dias
-semanas <- dias/7
-dias2 <- dias - semanas*7
-ESCREVA semanas "semanas e " dias2 "dias."
-FIM
