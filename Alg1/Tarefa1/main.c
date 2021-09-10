@@ -3,10 +3,10 @@
 #include "_functions/functions.h"
 
 int main(){
-    int number;
-    scanf("%d", &number);
+    int pointsNumber;
+    scanf("%d", &pointsNumber);
 
-    int pointsNumber = read_points_number(number);
+    pointsNumber = read_points_number(pointsNumber);
 
     COORDINATES *coordinates = read_points_coords(pointsNumber);
 
