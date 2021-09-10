@@ -35,7 +35,7 @@ float calc_distance_internal(COORDINATES *pointA, COORDINATES *pointB) {
 float calc_distance(int numberOfPoints, COORDINATES *coords) {
     float total_distance = 0;
 
-    for (int i = 0; i < numberOfPoints; i++) {
+    for (int i = 0; i < numberOfPoints - 1; i++) {
         total_distance = calc_distance_internal(&coords[i], &coords[i + 1])
                 + total_distance;
     }
